@@ -38,9 +38,8 @@ btnZero.addEventListener("click", function() {
             }   
         displayNumberOne()
         }
-    
 });
-checkNumberTwo
+
 btnOne.addEventListener("click", function() {
     if(variableToggle === false){
         if(checkNumberOne () === false){}
@@ -88,7 +87,10 @@ btnPeriod.addEventListener("click", function() {
 });
 
 btnClear.addEventListener("click", function() {
-    console.log("Clear");
+    firstNumber = 0;
+    displayNumberOne();
+    firstNumber = "";
+    secondNumber = "";
 });
 
 btnPlusMinus.addEventListener("click", function() {
