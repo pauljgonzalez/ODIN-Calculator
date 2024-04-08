@@ -225,7 +225,22 @@ btnNine.addEventListener("click", function() {
 });
 
 btnPeriod.addEventListener("click", function() {
-    console.log(".");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat("."); 
+           }   
+        displayNumberOne()
+       }
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(".");
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnClear.addEventListener("click", function() {
@@ -260,6 +275,9 @@ btnSubtracation.addEventListener("click", function() {
 });
 
 btnAddition.addEventListener("click", function() {
+    if( firstNumber == ""){
+        return;
+    }
     variableToggle = true;
     calulations = 'add';
 });
@@ -310,11 +328,19 @@ function calculate(){
     if (calulations == 'division'){
         sum = Number(firstNumber) / Number(secondNumber);
     }
-    if(String(sum).length > 10)
-    {
-        console.log('test');
+    
+    sum = String(sum);
+    if(sum.includes(".")){
+        sum = Number(sum)
+        sum = sum.toFixed(2);
         sum = String(sum);
-        sum = "ERROR";
+    }
+    if(sum.length > 10)
+    {   
+     sum = "ERROR";
+     displayDigits.innerHTML = sum;
+     firstNumber ="";
+     secondNumber ="";
     }
     displayDigits.innerHTML = sum;
 
