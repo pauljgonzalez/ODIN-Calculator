@@ -65,7 +65,7 @@ btnOne.addEventListener("click", function() {
        if(variableToggle === true){
         if(checkNumberTwo() === false){return;}
             else{
-            secondNumberConcat(0);
+            secondNumberConcat(1);
             }
         displayNumberTwo();
     }
@@ -310,8 +310,13 @@ function calculate(){
     if (calulations == 'division'){
         sum = Number(firstNumber) / Number(secondNumber);
     }
+    if(String(sum).length > 10)
+    {
+        console.log('test');
+        sum = String(sum);
+        sum = "ERROR";
+    }
     displayDigits.innerHTML = sum;
-
 
     firstNumber = sum;
     secondNumber = "";
