@@ -36,8 +36,19 @@ btnZero.addEventListener("click", function() {
             else{
                 firstNumberConcat(0);
             }   
-        displayNumberOne()
+        displayNumberOne();
         }
+
+    if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+        if(secondNumber ===""){
+            return;
+        }
+        else{
+            secondNumberConcat(0);
+        }
+    displayNumberTwo();
+    }
 });
 
 btnOne.addEventListener("click", function() {
@@ -46,8 +57,17 @@ btnOne.addEventListener("click", function() {
            else {
             firstNumberConcat(1); 
            }   
+        displayNumberOne()
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(0);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnTwo.addEventListener("click", function() {
@@ -55,9 +75,18 @@ btnTwo.addEventListener("click", function() {
         if(checkNumberOne () === false){}
            else {
             firstNumberConcat(2); 
-           }   
+           } 
+        displayNumberOne()  
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(2);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnThree.addEventListener("click", function() {
@@ -65,9 +94,18 @@ btnThree.addEventListener("click", function() {
         if(checkNumberOne () === false){}
            else {
             firstNumberConcat(3); 
-           }   
+           }
+        displayNumberOne()   
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(3);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnFour.addEventListener("click", function() {
@@ -75,19 +113,37 @@ btnFour.addEventListener("click", function() {
         if(checkNumberOne () === false){}
            else {
             firstNumberConcat(4); 
-           }   
-}
-   displayNumberOne()
-});
+           }  
+        displayNumberOne()
+        }
+
+        if(variableToggle === true){
+            if(checkNumberTwo() === false){return;}
+                else{
+                secondNumberConcat(4);
+                }
+            displayNumberTwo();
+        }
+}); 
+   
 
 btnFive.addEventListener("click", function() {
     if(variableToggle === false){
         if(checkNumberOne () === false){}
            else {
             firstNumberConcat(5); 
-           }   
+           }  
+        displayNumberOne() 
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(5);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnSix.addEventListener("click", function() {
@@ -95,9 +151,18 @@ btnSix.addEventListener("click", function() {
         if(checkNumberOne () === false){}
            else {
             firstNumberConcat(6); 
-           }   
+           }  
+        displayNumberOne() 
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(6);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnSeven.addEventListener("click", function() {
@@ -106,8 +171,17 @@ btnSeven.addEventListener("click", function() {
            else {
             firstNumberConcat(7); 
            }   
+        displayNumberOne()
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(7);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnEight.addEventListener("click", function() {
@@ -116,8 +190,17 @@ btnEight.addEventListener("click", function() {
            else {
             firstNumberConcat(8); 
            }   
+        displayNumberOne()
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(8);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnNine.addEventListener("click", function() {
@@ -126,8 +209,17 @@ btnNine.addEventListener("click", function() {
            else {
             firstNumberConcat(9); 
            }   
+        displayNumberOne()
        }
-   displayNumberOne()
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+            else{
+            secondNumberConcat(9);
+            }
+        displayNumberTwo();
+    }
+   
 });
 
 btnPeriod.addEventListener("click", function() {
@@ -139,6 +231,7 @@ btnClear.addEventListener("click", function() {
     displayNumberOne();
     firstNumber = "";
     secondNumber = "";
+    variableToggle = false;
 });
 
 btnPlusMinus.addEventListener("click", function() {
@@ -162,7 +255,7 @@ btnSubtracation.addEventListener("click", function() {
 });
 
 btnAddition.addEventListener("click", function() {
-    console.log("+");
+    variableToggle = true;
 });
 
 btnEqual.addEventListener("click", function() {
@@ -176,7 +269,7 @@ function checkNumberOne (){
 }
 
 function checkNumberTwo (){
-    if( SecondNumber.length > 10 ){
+    if( secondNumber.length > 10 ){
         return false;
     }
 }
@@ -184,11 +277,20 @@ function checkNumberTwo (){
 function displayNumberOne(){
     displayDigits.innerHTML = firstNumber;
 }
+function displayNumberTwo(){
+    displayDigits.innerHTML = secondNumber;
+}
 
 function firstNumberConcat(number){
     firstNumber = firstNumber + String(number);
     return firstNumber;
 }
+
+function secondNumberConcat(number){
+    secondNumber = secondNumber + String(number);
+    return firstNumber;
+}
+
 
 
 
