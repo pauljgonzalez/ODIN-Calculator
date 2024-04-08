@@ -19,13 +19,36 @@ const btnSubtracation = document.querySelector("#subtraction");
 const btnAddition = document.querySelector("#addition");
 const btnEqual = document.querySelector("#equal");
 
+const displayDigits = document.querySelector(".display-digits");
 
+let variableToggle = false;
+let firstNumber = "0";
+let secondNumber = "";
+
+displayNumberOne()
+firstNumber = "";
 btnZero.addEventListener("click", function() {
-    console.log("0");
+    if(variableToggle === false){
+         if(checkNumberOne () === false){return;}
+            if(firstNumber === ""){
+                return;
+            }
+            else{
+                firstNumberConcat(0);
+            }   
+        displayNumberOne()
+        }
+    
 });
-
+checkNumberTwo
 btnOne.addEventListener("click", function() {
-    console.log("1");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(1); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnTwo.addEventListener("click", function() {
@@ -96,9 +119,26 @@ btnEqual.addEventListener("click", function() {
     console.log("=");
 });
 
+function checkNumberOne (){
+    if( firstNumber.length > 10 ){
+        return false;
+    }
+}
 
+function checkNumberTwo (){
+    if( SecondNumber.length > 10 ){
+        return false;
+    }
+}
 
+function displayNumberOne(){
+    displayDigits.innerHTML = firstNumber;
+}
 
+function firstNumberConcat(number){
+    firstNumber = firstNumber + String(number);
+    return firstNumber;
+}
 
 
 

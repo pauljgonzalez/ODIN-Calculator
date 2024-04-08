@@ -30,7 +30,7 @@ body{
     margin-top: 64px;
     justify-content: flex-end;
     font-size: 64px;
-    letter-spacing:10px;
+    letter-spacing:9px;
     color: #1b1b1e;
     background-color: #fbfffe;
 }
@@ -71,7 +71,7 @@ body{
 button{
     font-size: 32px;
     background-color: #faa916 ;
-    color: #fbfffe;
+    color: black;
     display: inline-block;
     text-align: center;
 }
