@@ -24,6 +24,8 @@ const displayDigits = document.querySelector(".display-digits");
 let variableToggle = false;
 let firstNumber = "0";
 let secondNumber = "";
+let sum = "";
+let calulations = "";
 
 displayNumberOne()
 firstNumber = "";
@@ -243,23 +245,27 @@ btnPercentage.addEventListener("click", function() {
 });
 
 btnDivision.addEventListener("click", function() {
-    console.log("/");
+    variableToggle = true;
+    calulations = 'division';
 });
 
 btnMultiplication.addEventListener("click", function() {
-    console.log("*");
+    variableToggle = true;
+    calulations = 'multiplication';
 });
 
 btnSubtracation.addEventListener("click", function() {
-    console.log("-");
+    variableToggle = true;
+    calulations = 'subtraction';
 });
 
 btnAddition.addEventListener("click", function() {
     variableToggle = true;
+    calulations = 'add';
 });
 
 btnEqual.addEventListener("click", function() {
-    console.log("=");
+    calculate();
 });
 
 function checkNumberOne (){
@@ -289,6 +295,27 @@ function firstNumberConcat(number){
 function secondNumberConcat(number){
     secondNumber = secondNumber + String(number);
     return firstNumber;
+}
+
+function calculate(){
+    if (calulations == 'add'){
+        sum = Number(firstNumber) + Number(secondNumber);
+    }
+    if (calulations == 'subtraction'){
+        sum = Number(firstNumber) - Number(secondNumber);
+    }
+    if (calulations == 'multiplication'){
+        sum = Number(firstNumber) * Number(secondNumber);
+    }
+    if (calulations == 'division'){
+        sum = Number(firstNumber) / Number(secondNumber);
+    }
+    displayDigits.innerHTML = sum;
+
+
+    firstNumber = sum;
+    secondNumber = "";
+    calulations = "";
 }
 
 
