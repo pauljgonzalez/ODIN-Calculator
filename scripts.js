@@ -51,35 +51,83 @@ btnOne.addEventListener("click", function() {
 });
 
 btnTwo.addEventListener("click", function() {
-    console.log("2");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(2); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnThree.addEventListener("click", function() {
-    console.log("3");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(3); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnFour.addEventListener("click", function() {
-    console.log("4");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(4); 
+           }   
+}
+   displayNumberOne()
 });
 
 btnFive.addEventListener("click", function() {
-    console.log("5");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(5); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnSix.addEventListener("click", function() {
-    console.log("6");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(6); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnSeven.addEventListener("click", function() {
-    console.log("7");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(7); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnEight.addEventListener("click", function() {
-    console.log("8");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(8); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnNine.addEventListener("click", function() {
-    console.log("9");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else {
+            firstNumberConcat(9); 
+           }   
+       }
+   displayNumberOne()
 });
 
 btnPeriod.addEventListener("click", function() {
