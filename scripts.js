@@ -361,6 +361,10 @@ function calculate(){
     }
     
     sum = String(sum);
+    if(firstNumber === "" || secondNumber === "")
+    {
+        return;
+    }
     if(sum.includes(".")){
         sum = Number(sum)
         sum = sum.toFixed(2);
