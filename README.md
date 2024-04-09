@@ -5,4 +5,8 @@ Link to project: https://pauljgonzalez.github.io/ODIN-Calculator/
 
 How It's Made: Tech used: HTML, CSS, JavaScript
 
-Lessons Learned: 
+Lessons Learned: How to manipluate DOM and build a function calculator webpage.
+
+4/9/24
+Would like to come back and visit this more to refactor the code and update the webpage.
+I believe the JavaScript could be improved tremendously.
