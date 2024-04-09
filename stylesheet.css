@@ -72,15 +72,25 @@ body{
 button{
     font-size: 32px;
     background-color: #faa916 ;
-    color: black;
+    color: #1b1b1e;
     display: inline-block;
     text-align: center;
 }
 button:hover {
-    background-color: white
+    background-color: white;
+    color: #1b1b1e;
 }
 button:active {
     background-color: white;
     box-shadow: 0 2px #666;
     transform: translateY(2px);
   }
+
+.row-one > *{
+    background-color: #1b1b1e;
+    color: white;
+}
+#multiplication, #subtraction, #addition, #equal{
+    background-color: #1b1b1e;
+    color: white;
+}

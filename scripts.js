@@ -248,6 +248,7 @@ btnClear.addEventListener("click", function() {
     displayNumberOne();
     firstNumber = "";
     secondNumber = "";
+    sum = "";
     variableToggle = false;
 });
 
@@ -316,6 +317,12 @@ function secondNumberConcat(number){
 }
 
 function calculate(){
+    if(firstNumber == 0 || firstNumber == ''){
+        sum = 0;
+    }
+    if(secondNumber == 0 || secondNumber == ''){
+        sum = firstNumber;
+    }
     if (calulations == 'add'){
         sum = Number(firstNumber) + Number(secondNumber);
     }
