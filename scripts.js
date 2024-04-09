@@ -277,20 +277,52 @@ btnPlusMinus.addEventListener("click", function() {
 });
 
 btnPercentage.addEventListener("click", function() {
-    console.log("%");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){return;}
+           else {
+                let x = percentage(firstNumber);
+                    if( x === false){
+                        return;
+                    }
+                    firstNumber = x;
+                displayNumberOne()
+            }   
+           
+       }
+
+       if(variableToggle === true){
+            if(checkNumberTwo() === false){return;}
+                else {
+                    let y = percentage(secondNumber);
+                        if( y === false){
+                            return;
+                        }
+                        secondNumber = y
+                        displayNumberTwo();
+                    }
+        }
 });
 
 btnDivision.addEventListener("click", function() {
+    if( firstNumber == ""){
+        return;
+    }
     variableToggle = true;
     calulations = 'division';
 });
 
 btnMultiplication.addEventListener("click", function() {
+    if( firstNumber == ""){
+        return;
+    }
     variableToggle = true;
     calulations = 'multiplication';
 });
 
 btnSubtracation.addEventListener("click", function() {
+    if( firstNumber == ""){
+        return;
+    }
     variableToggle = true;
     calulations = 'subtraction';
 });
@@ -383,6 +415,28 @@ function calculate(){
     secondNumber = "";
     calulations = "";
 }
+function percentage(number){
+    let stringNum = String(number);
+    length = stringNum.length-2;
+    if( stringNum.includes(".") === true){
+        return false;
+    }
+    if( stringNum.length >= 2){
+        let output= stringNum.substring(0,length)+ "." + stringNum.substring(length);
+        return output;
+        
+    }
+    else if (stringNum.length == 1){
+        output = "."+"0" + stringNum;
+        return output;
+        
+    }
+    else{
+        return false;
+    }
+        
+}
+    
 
 
 
