@@ -253,7 +253,27 @@ btnClear.addEventListener("click", function() {
 });
 
 btnPlusMinus.addEventListener("click", function() {
-    console.log("Plus Minus");
+    if(variableToggle === false){
+        if(checkNumberOne () === false){}
+           else if (Number(firstNumber)>0){
+            firstNumber = Math.abs(firstNumber) * -1
+           }   
+           else {
+            firstNumber = Math.abs(firstNumber);
+           }
+        displayNumberOne()
+       }
+
+       if(variableToggle === true){
+        if(checkNumberTwo() === false){return;}
+        else if (Number(secondNumber)>0){
+            secondNumber = Math.abs(secondNumber) * -1
+           }   
+           else {
+            secondNumber = Math.abs(secondNumber);
+           }
+        displayNumberTwo();
+    }
 });
 
 btnPercentage.addEventListener("click", function() {
