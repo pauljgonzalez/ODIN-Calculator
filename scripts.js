@@ -333,6 +333,10 @@ function calculate(){
         sum = Number(firstNumber) * Number(secondNumber);
     }
     if (calulations == 'division'){
+        if(Number(secondNumber) === 0 || Number(secondNumber) === "" ){
+            displayDigits.innerHTML = "ERROR";
+            return;
+        }
         sum = Number(firstNumber) / Number(secondNumber);
     }
     
