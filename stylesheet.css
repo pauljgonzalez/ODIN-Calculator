@@ -69,6 +69,19 @@ body{
 #zero{
     width: 230px;
 }
+.row-one > *{
+    background-color: #1b1b1e;
+    color: white;
+}
+
+#multiplication, #subtraction, #addition, #equal{
+    background-color: #1b1b1e;
+    color: white;
+}
+#multiplication:hover, #subtraction:hover, #addition:hover, #equal:hover{
+    background-color: white;
+    color: #1b1b1e;
+}
 button{
     font-size: 32px;
     background-color: #faa916 ;
@@ -86,11 +99,3 @@ button:active {
     transform: translateY(2px);
   }
 
-.row-one > *{
-    background-color: #1b1b1e;
-    color: white;
-}
-#multiplication, #subtraction, #addition, #equal{
-    background-color: #1b1b1e;
-    color: white;
-}
